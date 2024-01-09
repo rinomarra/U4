@@ -76,9 +76,6 @@ public class Main {
 
     }
 
-    public static int square(int n) {
-        return n * n;  // Restituisce il quadrato di n
-    }
 
     // ******************************************** SWITCH-CASE **************************************************
 /*        String favouriteColor = "green";
@@ -165,5 +162,35 @@ public class Main {
             if (i == 6) break; // col break usciamo proprio dal loop
             System.out.println(i);
         }*/
+    //operatore X++
+/*Java inoltre offre altri quattro operatori che sono delle abbreviazioni, due di incremento di variabili e due di decremento. Sia X
+    una variabile, possiamo scrivere:
+    X++; // valuta X, poi incrementa X di 1
+    X--; // valuta X, poi decrementa X di 1
+++X; // incrementa X di 1, poi valuta X
+--X; // decrementa X di 1, poi valuta X
 
+    L’espressione X++ è un comando di assegnamento, ma anche una espressione che restituisce un risultato. Il comportamento
+    cambia a seconda che i simboli di incremento o decremento precedano o seguano la variabile:
+    se l’operatore segue la variabile, l’espressione restituisce il valore attuale della variabile prima di modificarlo;
+    se l’operatore precede la variabile, l’espressione restituisce il valore della variabile già modificato.
+    Ad esempio:
+    int X = 10;
+    int Y = X++;
+    // risultato: X=11 e Y=10
+    //Ecco un esempio più complesso da poter provare:
+
+
+            int X,Y,Z,W,V;
+            X=10;
+            System.out.println("X="+X);
+            Y=X++;
+            System.out.println("Y=X++: ho X="+X+",Y="+Y);
+            Z=++Y;
+            System.out.println("Z=++Y: ho Z="+Z+",Y="+Y);
+            W=Z--;
+            System.out.println("W=Z--: ho W="+W+",Z="+Z);
+            V=--W;
+            System.out.println("V=--W: ho V="+V+",W="+W);
+       */
 }
