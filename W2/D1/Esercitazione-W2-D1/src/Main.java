@@ -70,7 +70,7 @@ public class Main {
             System.err.println(ex.getMessage());
         } catch (NullPointerException ex){
             System.err.println(ex.getMessage());
-        } catch (NumberFormatException ex) {
+        } catch (ArithmeticException ex) {
             System.err.println(ex.getMessage());
         }
 
