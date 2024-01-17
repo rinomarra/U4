@@ -213,6 +213,9 @@ public class Main {
         System.out.println(yesterday.isBefore(tomorrow));
 
         LocalDate date = LocalDate.parse("2023-10-31");
+        LocalDate orderDate = LocalDate.parse("2012-02-21");
+        LocalDate deliveryDate = LocalDate.parse("2012-02-24");
+        //Order order = new Order(id, status, LocalDate:orderDate);
         //yyyy-mm-dd
         System.out.println(date);
 
