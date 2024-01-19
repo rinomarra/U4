@@ -13,6 +13,13 @@ public class Utils {
         return random.nextLong(ORIGIN, BOUND);
     };
 
+    public static final Supplier<Long> randomOrderIdSupplier(long origin, long bound) {
+        return () -> {
+            Random random = new Random();
+            return random.nextLong(origin, bound);
+        };
+    }
+
     // Metodo alternativo per ottenere un ID ordine casuale
     public static long getRandomOrderId() {
         return randomOrderIdSupplier.get();
