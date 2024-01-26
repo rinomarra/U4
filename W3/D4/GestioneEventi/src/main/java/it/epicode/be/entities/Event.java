@@ -1,24 +1,24 @@
 package it.epicode.be.entities;
 
+import it.epicode.be.enumerations.TipoEvento;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "eventi")
-public class Event {
+public abstract class Event {
     @Id
     @GeneratedValue
     private long id;
 
     private String titolo;
-    @Column(name = "data_evento")
     private LocalDate dataEvento;
     private String descrizione;
     @Enumerated(EnumType.STRING)
-    @Column(name = "tipo_evento")
     private TipoEvento tipoEvento;
-    @Column(name = "numero_massimo_partecipanti")
     private int numeroMassimoPartecipanti;
 
     @ManyToOne
@@ -26,7 +26,6 @@ public class Event {
     private Location luogoEvento;
 
     @OneToMany(mappedBy = "evento", cascade = CascadeType.REMOVE)
-    @OrderBy("evento.dataEvento ASC")
     private List<Attendance> listaPartecipazioni;
 
     public Event() {
